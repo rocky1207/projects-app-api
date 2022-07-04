@@ -1,3 +1,11 @@
+IMPORTANT!!!
+
+After creating NODE_MODULES it is necessary to open file: 
+node_modules/@strapi/utils/lib/sanitize/visitors/remove-restricted-relations.js 
+and change line of code No.3 with: 
+const ACTIONS_TO_VERIFY = ['find', 'getRole', 'getRoles'];
+
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
