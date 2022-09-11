@@ -5,6 +5,17 @@ node_modules/@strapi/utils/lib/sanitize/visitors/remove-restricted-relations.js
 and change line of code No.3 with: 
 const ACTIONS_TO_VERIFY = ['find', 'getRole', 'getRoles'];
 
+Then open file config/api.js and change it with this lines:
+module.exports = ({ env }) => ({
+  responses: {
+    privateAttributes: ["_v", "id", "created_at"],
+  },
+  rest: {
+    defaultLimit: 100,
+    maxLimit: 250,
+  },
+});
+
 
 # 🚀 Getting started with Strapi
 
